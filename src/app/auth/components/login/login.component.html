@@ -1,0 +1,23 @@
+
+<div class="loginForm">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" autocomplete="off" novalidate>
+  
+        <div class="">
+            <label for="login"><i class="fa fa-user icon"></i></label>
+            <input type="text" id="login" name="login" formControlName="login" placeholder="Username">
+        </div>
+  
+        <div class="">
+            <label for="password"><i class="fa fa-key icon"></i></label>
+            <input type="password" id="password" name="password" formControlName="password" placeholder="Password">
+        </div>
+  
+        <div class="loginButtonDiv">
+            <input id="loginButton" class="loginButton" type="submit" value="Zaloguj">
+        </div>
+  
+        <div *ngIf="error" class="loginErrorDiv">
+            Wprowadzono niepoprawne dane logowania.
+        </div>
+    </form>
+  </div>
