@@ -15,9 +15,15 @@
         <div class="loginButtonDiv">
             <input id="loginButton" class="loginButton" type="submit" value="Zaloguj">
         </div>
-  
-        <div *ngIf="error" class="loginErrorDiv">
-            Wprowadzono niepoprawne dane logowania.
-        </div>
     </form>
   </div>
+
+
+  {{loadingTransactions$ | async}}
+  <hr/>
+  {{ currentLoggedInUser$ | async }}
+
+
+<div class="loginButtonDiv">
+    <input id="logoutButton" type="button" (click)="logout()" value="Wyloguj">
+</div>
